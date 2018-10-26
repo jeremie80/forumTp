@@ -8,11 +8,6 @@ module.exports = function(app, next) {
     console.log('Backend connected to the broker mqtt');
     app.mqttClient = client;
 
-    app.mqttClient.on('message', function(topic, payload) {
-      app.subscribers[topic].forEach(socket => {
-        socket.emit(topic, payload);
-      });
-    });
     next();
   });
 };
