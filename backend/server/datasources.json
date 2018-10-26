@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "forumTp": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "27017/forumTp",
+    "database": "forumTp",
+    "password": "",
+    "name": "forumTp",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
