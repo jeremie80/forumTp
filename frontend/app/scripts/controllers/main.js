@@ -28,12 +28,16 @@ angular.module('frontendApp')
         console.log(response);
     });
   };
-  $scope.getComment = function(articleid){
+  $scope.getComment = function(titlearticle, articleid){
+    
     $http.get('http://localhost:3000/api/Articles/'+articleid+'/comment').then(function(response) {
-        
-        console.log(response);
+        $scope.comments.titlearticle = titlearticle;
+        $scope.comments = response.data;
     });
-
+  
+  };
+  $scope.addComment = function(dataComment){
+    console.log(dataComment);
   };
  
 

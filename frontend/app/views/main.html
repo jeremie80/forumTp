@@ -2,21 +2,29 @@
   <form class="form-inline" style="margin-top:50px">
       <div class="form-group">
         <!-- <label for="titleArticle">Titre de l'article</label> -->
-        <input type="text" class="form-control" id="exampleInputName2" placeholder="Titre de l'article" ng-model="dataArticle.title">
+        <input type="text" class="form-control" id="titleArticle" placeholder="Titre de l'article" ng-model="dataArticle.title">
       </div>
   
       <button type="submit" class="btn btn-default" ng-click="addArticle(dataArticle)">Ajouter l'articles</button>
   </form>
   <ul class="list-group" style="margin-top: 20px">
-      <li class="list-group-item" ng-repeat="article in articles"><button type="button" class="btn btn-link" ng-click='getComment(article.id)'>{{article.title}}</button></li>
+      <li class="list-group-item" ng-repeat="article in articles"><button type="button" class="btn btn-link" ng-click='getComment(article.title, article.id)'>{{article.title}}</button></li>
       
   </ul>
   <div class="panel panel-default" style="margin-top:25px">
       <div class="panel-heading">
-        <h3 class="panel-title" >{{article.title}}</h3>
+        <h3 class="panel-title" >{{comments.titlearticle}}</h3>
       </div>
       <div class="panel-body">
-       
+        <li class="list-group-item" ng-repeat="comment in comments">{{comment.text}}</li>
+        <form class="form-inline" style="margin-top:50px">
+          <div class="form-group">
+            <!-- <label for="titleArticle">Titre de l'article</label> -->
+            <input type="text" class="form-control" id="text" placeholder="Commentaire" ng-model="dataComment.text">
+          </div>
+      
+          <button type="submit" class="btn btn-default" ng-click="addComment(dataComment)">Envoyer</button>
+      </form>
       </div>
   </div>
 </div>
