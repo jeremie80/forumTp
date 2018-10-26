@@ -1,15 +1,16 @@
 # forumTp
 Installer les node_modules du backend 
+
 Installer les les bower modules de frontend
 
-lancer le backend
+#lancer le backend
 
 npm start
 
-lancer le frontend
+#lancer le frontend
 
 grunt serve
 
-lancer le brocker
+#lancer le brocker
 
 node server.js
