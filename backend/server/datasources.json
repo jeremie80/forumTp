@@ -6,7 +6,7 @@
   "forumTp": {
     "host": "localhost",
     "port": 27017,
-    "url": "27017/forumTp",
+    "url": "",
     "database": "forumTp",
     "password": "",
     "name": "forumTp",
