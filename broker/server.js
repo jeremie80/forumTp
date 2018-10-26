@@ -5,7 +5,7 @@ const moscaSettings = {
     port: 1883,
     host: 'localhost',
     http: {
-        port: 3000,
+        port: 3001,
         bundle: true,
         static: './'
     },
