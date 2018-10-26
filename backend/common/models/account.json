@@ -17,7 +17,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "articleId": {
+      "type": "hasMany",
+      "model": "Article",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

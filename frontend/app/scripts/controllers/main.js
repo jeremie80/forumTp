@@ -15,12 +15,30 @@ angular.module('frontendApp')
       'Karma'
     ];
   
-  $scope.getArticles = function(){
-    $http.get('http://localhost:3000/api/Articles').then(function(response) {
-       return $scope.articles = response.data;
+
+  $http.get('http://localhost:3000/api/Articles').then(function(response) {
+      $scope.articles = response.data;
       console.log($scope.articles);
   });
+
+  $scope.addArticle = function(dataArticle){
+    dataArticle.accountId = "5bd2d498fb09181fe466c3cd";
+    $http.post('http://localhost:3000/api/Articles',dataArticle).then(function(response) {
+        
+        console.log(response);
+    });
   };
+  $scope.getComment = function(articleid){
+    $http.get('http://localhost:3000/api/Articles/'+articleid+'/comment').then(function(response) {
+        
+        console.log(response);
+    });
+
+  };
+ 
+
+
+
 
 
     
