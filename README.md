@@ -1,7 +1,7 @@
 # forumTp
 Installer les node_modules du backend 
 
-Installer les les bower modules de frontend
+Installer les les bower modules du frontend
 
 #lancer le backend
 
